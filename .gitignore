@@ -1,0 +1,66 @@
+# .NET & Visual Studio
+bin/
+obj/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.db
+*.pdb
+*.cache
+*.log
+*.vs/
+TestResults/
+.vscode/
+*.ncrunch*
+*.localhistory/
+*.DS_Store
+*.sln.ide
+*.sln.iml
+*.sln.cache
+
+# Rider
+.idea/
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Auto-generated files
+Generated\ Files/
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# DotCover
+*.dotCover
+
+# NCrunch
+*.ncrunch*
+.*crunch*.local.xml
+
+# Azure Pipelines
+.vsts/
+
+# Local NuGet packages
+*.nupkg
+# NuGet v3's project.json files produces this lock file
+project.lock.json
+# NuGet v4.6+ package lock file
+packages.lock.json
+# NuGet v5.0+ package audit file
+packages.audit.json
+
+# Entity Framework
+Migrations/
+
+# SQLite
+*.db
+
+# Others
+*.swp
+*.bak
+*.tmp
+*.tmp.* 
