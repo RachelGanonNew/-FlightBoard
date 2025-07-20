@@ -21,10 +21,9 @@ const FlightBoardPage: React.FC = () => {
 
   useEffect(() => {
     const connection = createFlightHubConnection();
-    connection.start().then(() => {
-      connection.on('FlightAdded', () => refetch());
-      connection.on('FlightDeleted', () => refetch());
-    });
+    connection.on('FlightAdded', () => refetch());
+    connection.on('FlightDeleted', () => refetch());
+    connection.start();
     return () => { connection.stop(); };
   }, [refetch]);
 

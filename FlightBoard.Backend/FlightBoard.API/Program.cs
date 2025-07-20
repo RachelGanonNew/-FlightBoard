@@ -32,6 +32,21 @@ builder.Services.AddDbContext<FlightDbContext>(options =>
 // Register repository
 builder.Services.AddScoped<IFlightRepository, FlightRepository>();
 
+// Add SignalR
+builder.Services.AddSignalR();
+
+// Add CORS policy for frontend
+builder.Services.AddCors(options =>
+{
+    options.AddDefaultPolicy(policy =>
+    {
+        policy.WithOrigins("http://localhost:5173")
+              .AllowAnyHeader()
+              .AllowAnyMethod()
+              .AllowCredentials();
+    });
+});
+
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
 
@@ -44,6 +59,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseCors();
 
 app.MapControllers();
 app.MapHub<FlightBoard.API.Hubs.FlightHub>("/flightHub");
