@@ -93,6 +93,3 @@ Once both the backend and frontend are running:
 
 ---
 
-## License
-
-MIT (or your preferred license) 
